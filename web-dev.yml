@@ -1,0 +1,31 @@
+server:
+  port: 9015
+spring:
+  application:
+    name: tensquare-web #指定服务名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    tensquare-base: #自定义名称
+      path: /base/** #访问路径
+      serviceId: tensquare-base #服务名称
+    tensquare-article: #自定义名称
+      path: /article/** #访问路径
+      serviceId: tensquare-article #服务名称
+    tensquare-friend: #自定义名称
+      path: /friend/** #访问路径
+      serviceId: tensquare-friend #服务名称
+    tensquare-gathering: #自定义名称
+      path: /gathering/** #访问路径
+      serviceId: tensquare-gathering #服务名称
+    tensquare-qa: #自定义名称
+      path: /qa/** #访问路径
+      serviceId: tensquare-qa #服务名称
+    tensquare-user: #自定义名称
+      path: /user/** #访问路径
+      serviceId: tensquare-user #服务名称
