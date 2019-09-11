@@ -19,4 +19,4 @@ eureka:
       defaultZone: http://localhost:10086/eureka
   instance:
     prefer-ip-address: true
-ip: 3212313    
+ip: 1111111    
